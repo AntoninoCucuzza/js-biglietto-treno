@@ -41,20 +41,8 @@ if (userAge <  18) { //sconto under 18 = 20%
     
     document.getElementById('prezzo').innerHTML = 'ciao devi pagare ' + (priceOver.toFixed(2)) + '€';
 
-} else if (userAge > 18 < 65 ){
-   
+} else{
     console.log(priceTot)
     document.getElementById('prezzo').innerHTML = 'ciao devi pagare ' + (priceTot.toFixed(2)) + '€';
 
-} else if ((userTrip = NaN) || (userAge = NaN) ) {
-    alert('i numeri');
-    console.log('i numeri ')
 }
-
-
-
-
-
-const x =( 11.0523793254012395401823654)
-console.log (x.toFixed(2))
-
