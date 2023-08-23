@@ -21,8 +21,22 @@ console.log(Number(userAge));
 
 
 //calcolare prezzo tot del viaggio 0.21€ al km
-const kmPrice = (0.21)
-console.log(kmPrice);
+const pricePerKm = (0.21)
+console.log(pricePerKm);
+
+var priceTot = (userTrip * pricePerKm)
+
+if (userAge <  18) {
+    var priceUnder = (priceTot / 100 * 80)
+    console.log (priceUnder)
+
+} else if (userAge > 65){
+    var priceOver = (priceTot / 100 * 60)
+    console.log (priceOver)
+    
+} else{
+    console.log(priceTot)
+}
 
 
 
