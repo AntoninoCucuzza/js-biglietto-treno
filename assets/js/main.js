@@ -6,7 +6,7 @@ Sulla base di queste informazioni dovrà calcolare il prezzo totale del viaggio,
 il prezzo del biglietto è definito in base ai km (0.21 € al km)
 va applicato uno sconto del 20% per i minorenni
 va applicato uno sconto del 40% per gli over 65.
-
+L'output del prezzo finale va stampato in forma umana (ovvero con massimo due decimali, per indicare i centesimi sul prezzo). Questo richiederà un minimo di ricerca nella documentazione di JS.
 */
 
 console.log('hello world')
@@ -26,21 +26,31 @@ console.log(pricePerKm);
 
 var priceTot = (userTrip * pricePerKm)
 
-if (userAge <  18) {
+if (userAge <  18) { //sconto under 18 = 20%
+
     var priceUnder = (priceTot / 100 * 80)
     console.log (priceUnder)
 
-} else if (userAge > 65){
+    document.getElementById('prezzo').innerHTML = 'ciao devi pagare ' + (priceUnder.toFixed(2)) + '€';
+
+
+} else if (userAge > 65){ //sconto over 65 = 40%
+   
     var priceOver = (priceTot / 100 * 60)
     console.log (priceOver)
     
+    document.getElementById('prezzo').innerHTML = 'ciao devi pagare ' + (priceOver.toFixed(2)) + '€';
+
 } else{
+   
     console.log(priceTot)
+    
+    document.getElementById('prezzo').innerHTML = 'ciao devi pagare ' + (priceTot.toFixed(2)) + '€';
+
 }
 
 
 
-//sconto under 18 = 20%
+const x =( 11.0523793254012395401823654)
+console.log (x.toFixed(2))
 
-
-//sconto over 65 = 40%
