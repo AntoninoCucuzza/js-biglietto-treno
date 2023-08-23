@@ -13,8 +13,17 @@ console.log('hello world')
 
 //chiedere numero chilometri e età
 
+const userTrip = prompt('scrivi quanti km devi percorrere'); 
+console.log(Number(userTrip));
+
+const userAge = prompt('scrivi la tua età'); 
+console.log(Number(userAge));
+
 
 //calcolare prezzo tot del viaggio 0.21€ al km
+const kmPrice = (0.21)
+console.log(kmPrice);
+
 
 
 //sconto under 18 = 20%
