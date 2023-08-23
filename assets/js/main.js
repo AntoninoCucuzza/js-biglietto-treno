@@ -14,10 +14,10 @@ console.log('hello world')
 //chiedere numero chilometri e età
 
 const userTrip = prompt('scrivi quanti km devi percorrere'); 
-console.log(Number(userTrip));
+console.log(Number(userTrip ));
 
 const userAge = prompt('scrivi la tua età'); 
-console.log(Number(userAge));
+console.log(Number(userAge ));
 
 
 //calcolare prezzo tot del viaggio 0.21€ al km
@@ -41,13 +41,17 @@ if (userAge <  18) { //sconto under 18 = 20%
     
     document.getElementById('prezzo').innerHTML = 'ciao devi pagare ' + (priceOver.toFixed(2)) + '€';
 
-} else{
+} else if (userAge > 18 < 65 ){
    
     console.log(priceTot)
-    
     document.getElementById('prezzo').innerHTML = 'ciao devi pagare ' + (priceTot.toFixed(2)) + '€';
 
+} else if ((userTrip = NaN) || (userAge = NaN) ) {
+    alert('i numeri');
+    console.log('i numeri ')
 }
+
+
 
 
 
